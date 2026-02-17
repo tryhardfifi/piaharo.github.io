@@ -456,15 +456,30 @@ section { padding: 100px 0; }
 }
 
 /* ─── WORK ─── */
+.work-row-label {
+  font-size: 0.74rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.work-row-label:not(:first-child) {
+  margin-top: 48px;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.work-grid .work-card:nth-child(4),
-.work-grid .work-card:nth-child(5) {
-  /* last two cards span the bottom row centered */
+.work-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 66.666%;
 }
 
 .work-card {
@@ -533,19 +548,25 @@ section { padding: 100px 0; }
   font-weight: 300;
 }
 
-/* 3x2 grid on desktop */
+/* grids on desktop */
 @media (min-width: 901px) {
   .work-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .work-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 50%;
   }
 }
 
 @media (max-width: 900px) {
   .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
 }
 
 @media (max-width: 600px) {
   .work-grid { grid-template-columns: 1fr; }
+  .work-grid-2 { grid-template-columns: 1fr; max-width: 100%; }
   .work-thumbnail { max-height: 300px; }
 }
 
@@ -917,6 +938,7 @@ footer .footer-accent {
     <div class="section-label">Selected work</div>
     <h2 class="section-title reveal">Ads that <em>perform.</em></h2>
     <p class="section-desc reveal">A few creatives I've produced. Each one was built for performance and designed to convert.</p>
+    <div class="work-row-label reveal">Performance & AI Creative</div>
     <div class="work-grid reveal">
       <div class="work-card">
         <div class="work-thumbnail">
@@ -941,6 +963,17 @@ footer .footer-accent {
       </div>
       <div class="work-card">
         <div class="work-thumbnail">
+          <video src="ad6.mp4" muted loop playsinline></video>
+        </div>
+        <h4>FITS — AI Try-On Winner</h4>
+        <p>Winning creative for FITS, a fashion and closet app — AI-powered try-on concept that drove installs and engagement.</p>
+      </div>
+    </div>
+
+    <div class="work-row-label reveal">Influencer & UGC Content</div>
+    <div class="work-grid-2 reveal">
+      <div class="work-card">
+        <div class="work-thumbnail">
           <video src="ad4.mp4" muted loop playsinline></video>
         </div>
         <h4>300K+ Views — Picsart</h4>
@@ -952,13 +985,6 @@ footer .footer-accent {
         </div>
         <h4>2.1M Views — Lemon8</h4>
         <p>Creative for ByteDance's Lemon8 app — 2.1M views with content built to feel platform-native from the first frame.</p>
-      </div>
-      <div class="work-card">
-        <div class="work-thumbnail">
-          <video src="ad6.mp4" muted loop playsinline></video>
-        </div>
-        <h4>FITS — AI Try-On Winner</h4>
-        <p>Winning creative for FITS, a fashion and closet app — AI-powered try-on concept that drove installs and engagement.</p>
       </div>
     </div>
   </div>
