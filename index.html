@@ -456,30 +456,24 @@ section { padding: 100px 0; }
 }
 
 /* ─── WORK ─── */
-.work-row-label {
-  font-size: 0.74rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-.work-row-label:not(:first-child) {
-  margin-top: 48px;
-}
-
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.work-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 66.666%;
+.work-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--border-warm);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin: 0 24px 0;
 }
 
 .work-card {
@@ -551,22 +545,16 @@ section { padding: 100px 0; }
 /* grids on desktop */
 @media (min-width: 901px) {
   .work-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .work-grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 50%;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 900px) {
   .work-grid { grid-template-columns: repeat(2, 1fr); }
-  .work-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
 }
 
 @media (max-width: 600px) {
   .work-grid { grid-template-columns: 1fr; }
-  .work-grid-2 { grid-template-columns: 1fr; max-width: 100%; }
   .work-thumbnail { max-height: 300px; }
 }
 
@@ -938,12 +926,12 @@ footer .footer-accent {
     <div class="section-label">Selected work</div>
     <h2 class="section-title reveal">Ads that <em>perform.</em></h2>
     <p class="section-desc reveal">A few creatives I've produced. Each one was built for performance and designed to convert.</p>
-    <div class="work-row-label reveal">Performance & AI Creative</div>
     <div class="work-grid reveal">
       <div class="work-card">
         <div class="work-thumbnail">
           <video src="ad1.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">Performance</span>
         <h4>18.7 Million Views</h4>
         <p>Organic-style video ad for the Mojo app — a great hook and native feel drove 18.7M views.</p>
       </div>
@@ -951,6 +939,7 @@ footer .footer-accent {
         <div class="work-thumbnail">
           <video src="ad2.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">AI Creative</span>
         <h4>AI UGC × Auto Edit</h4>
         <p>AI-generated creator promotes an auto-edit feature — scripted, dubbed, and produced entirely with AI tools.</p>
       </div>
@@ -958,6 +947,7 @@ footer .footer-accent {
         <div class="work-thumbnail">
           <video src="ad3.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">AI Creative</span>
         <h4>$53.5K Spent Profitably</h4>
         <p>AI before-and-after creative that scaled to $53.5K+ in profitable ad spend — proof that AI-native ads convert.</p>
       </div>
@@ -965,17 +955,15 @@ footer .footer-accent {
         <div class="work-thumbnail">
           <video src="ad6.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">AI Creative</span>
         <h4>FITS — AI Try-On Winner</h4>
         <p>Winning creative for FITS, a fashion and closet app — AI-powered try-on concept that drove installs and engagement.</p>
       </div>
-    </div>
-
-    <div class="work-row-label reveal">Influencer & UGC Content</div>
-    <div class="work-grid-2 reveal">
       <div class="work-card">
         <div class="work-thumbnail">
           <video src="ad4.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">Influencer</span>
         <h4>300K+ Views — Picsart</h4>
         <p>UGC-style creative for Picsart promoting their remove object feature — 300K+ views on a native, scroll-stopping hook.</p>
       </div>
@@ -983,6 +971,7 @@ footer .footer-accent {
         <div class="work-thumbnail">
           <video src="ad5.mp4" muted loop playsinline></video>
         </div>
+        <span class="work-tag">Influencer</span>
         <h4>2.1M Views — Lemon8</h4>
         <p>Creative for ByteDance's Lemon8 app — 2.1M views with content built to feel platform-native from the first frame.</p>
       </div>
